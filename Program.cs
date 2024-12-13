@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             string nameImput;
+            string symbol = "";
 
             char symbolImput;
 
@@ -14,21 +15,16 @@
             Console.Write("Введите символ: ");
             symbolImput = Convert.ToChar(Console.ReadLine());
 
-            Console.SetCursorPosition(0, 3); 
+            Console.SetCursorPosition(0, 3);
 
-            for (int i = 0; i < nameImput.Length + 2; i++)
+            for (int i = 0; i < nameImput.Length+2; i++)
             {
-                Console.Write(symbolImput);
+                symbol += symbolImput;
             }
 
-            Console.WriteLine($"\n{symbolImput}{nameImput}{symbolImput}");
-
-            for (int i = 0; i < nameImput.Length + 2; i++)
-            {
-                Console.Write(symbolImput);
-            }
-
+            Console.WriteLine($"{symbol}\n{symbolImput}{nameImput}{symbolImput}\n{symbol}");
             Console.ReadKey();
         }
     }
 }
+    
