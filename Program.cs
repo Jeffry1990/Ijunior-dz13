@@ -6,6 +6,7 @@
         {
             string nameImput;
             string symbol = "";
+            string middleString;
 
             char symbolImput;
 
@@ -14,17 +15,17 @@
 
             Console.Write("Введите символ: ");
             symbolImput = Convert.ToChar(Console.ReadLine());
+            middleString = $"{symbolImput}{nameImput}{symbolImput}";
 
             Console.SetCursorPosition(0, 3);
 
-            for (int i = 0; i < nameImput.Length+2; i++)
+            for (int i = 0; i < middleString.Length; i++)
             {
                 symbol += symbolImput;
             }
 
-            Console.WriteLine($"{symbol}\n{symbolImput}{nameImput}{symbolImput}\n{symbol}");
+            Console.WriteLine($"{symbol}\n{middleString}\n{symbol}");
             Console.ReadKey();
         }
     }
 }
-    
